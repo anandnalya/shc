@@ -24,16 +24,21 @@
   <parent>
     <groupId>com.hortonworks</groupId>
     <artifactId>shc</artifactId>
-    <version>1.1.2-2.2-s_2.11-SNAPSHOT</version>
+    <version>1.1.2-2.2-cdh5.10.0</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>shc-core</artifactId>
-  <version>1.1.2-2.2-s_2.11-SNAPSHOT</version>
+  <version>1.1.2-2.2-cdh5.10.0</version>
   <packaging>jar</packaging>
   <name>HBase Spark Connector Project Core</name>
 
   <dependencies>
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-mapreduce-client-core</artifactId>
+      <version>${hadoop.version}</version>
+    </dependency>
     <dependency>
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-core_${scala.binary.version}</artifactId>
